@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: shorouk-al-fajr-shop
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: shop-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
